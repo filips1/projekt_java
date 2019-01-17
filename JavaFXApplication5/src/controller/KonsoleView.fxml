@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Konsole_controller">
+   <children>
+      <Button layoutX="8.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnConnect" prefHeight="39.0" prefWidth="221.0" text="Zamień na Gry" textFill="#4d08e1" underline="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Button>
+      <Button layoutX="111.0" layoutY="149.0" mnemonicParsing="false" onAction="#wstawkonsole" prefHeight="25.0" prefWidth="102.0" text="Dodaj konsole" />
+      <Separator layoutX="228.0" layoutY="48.0" orientation="VERTICAL" prefHeight="352.0" prefWidth="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="48.0" />
+      <TextArea fx:id="resultConsole" layoutX="14.0" layoutY="243.0" prefHeight="143.0" prefWidth="208.0" />
+      <TableView fx:id="KonsoleTable" layoutX="235.0" layoutY="153.0" prefHeight="242.0" prefWidth="488.0">
+        <columns>
+          <TableColumn fx:id="colKonId" prefWidth="82.0" text="ID" />
+          <TableColumn fx:id="colKonNazwa" prefWidth="117.0" text="Nazwa konsoli" />
+            <TableColumn fx:id="colKonRok" prefWidth="97.0" text="Rok Produkcji" />
+            <TableColumn fx:id="colKonProd" prefWidth="91.0" text="Producent" />
+        </columns>
+      </TableView>
+      <Label layoutX="18.0" layoutY="217.0" prefHeight="25.0" prefWidth="77.0" text="Resultat" />
+      <Label layoutX="19.0" layoutY="58.0" prefHeight="25.0" prefWidth="85.0" text="Nazwa Konsoli" />
+      <Label layoutX="19.0" layoutY="88.0" prefHeight="25.0" prefWidth="77.0" text="Producent" />
+      <Label layoutX="19.0" layoutY="118.0" prefHeight="25.0" prefWidth="77.0" text="Rok Produkcji" />
+      <TextField fx:id="txtprod" layoutX="104.0" layoutY="88.0" prefHeight="25.0" prefWidth="114.0" promptText="Producent" />
+      <TextField fx:id="txtrok_p" layoutX="104.0" layoutY="118.0" prefHeight="25.0" prefWidth="114.0" promptText="Rok" />
+      <TextField fx:id="txtnazwa_k" layoutX="104.0" layoutY="58.0" prefHeight="25.0" prefWidth="114.0" promptText="Nazwa" />
+      <Label layoutX="246.0" layoutY="48.0" prefHeight="25.0" prefWidth="63.0" text="ID Konsoli" />
+      <Label layoutX="339.0" layoutY="48.0" prefHeight="25.0" prefWidth="85.0" text="Rok produkcji" />
+      <TextField fx:id="searchIDkonsoli" layoutX="246.0" layoutY="78.0" prefHeight="25.0" prefWidth="77.0" promptText="ID" />
+      <TextField fx:id="searchRokP" layoutX="339.0" layoutY="78.0" prefHeight="25.0" prefWidth="85.0" promptText="Rok" />
+      <Button layoutX="247.0" layoutY="114.0" mnemonicParsing="false" onAction="#PrzeszukajKonsole" prefHeight="25.0" prefWidth="85.0" text="Wyszukaj" />
+      <Button layoutX="345.0" layoutY="114.0" mnemonicParsing="false" onAction="#updateKonsole" prefHeight="25.0" prefWidth="85.0" text="Update" />
+      <Button layoutX="440.0" layoutY="114.0" mnemonicParsing="false" onAction="#usunkonsole" prefHeight="25.0" prefWidth="77.0" text="Usun" />
+      <Button layoutX="525.0" layoutY="114.0" mnemonicParsing="false" onAction="#inicjalizacja" prefHeight="25.0" prefWidth="126.0" text="Wyszukaj wszystkich" />
+      <Label layoutX="440.0" layoutY="48.0" prefHeight="25.0" prefWidth="85.0" text="Nazwa Konsoli" />
+      <TextField fx:id="searchNazwaK" layoutX="440.0" layoutY="76.0" prefHeight="25.0" prefWidth="114.0" promptText="Nazwa" />
+      <Label layoutX="561.0" layoutY="46.0" prefHeight="25.0" prefWidth="85.0" text="Producent" />
+      <TextField fx:id="searchprod" layoutX="563.0" layoutY="76.0" prefHeight="25.0" prefWidth="114.0" promptText="producent" />
+      <Label alignment="CENTER" layoutX="234.0" layoutY="3.0" prefHeight="45.0" prefWidth="496.0" text="Konsole">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="19.0" layoutY="149.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="85.0" text="clear" />
+      <Button layoutX="660.0" layoutY="114.0" mnemonicParsing="false" onAction="#clearsear" prefHeight="25.0" prefWidth="63.0" text="clear" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="newPane" onDragDetected="#initialize" prefHeight="410.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Gry_controller">
+   <children>
+      <TextField fx:id="searchNazwaG" layoutX="320.0" layoutY="88.0" prefHeight="25.0" prefWidth="114.0" promptText="Nazwa" />
+      <Label layoutX="334.0" layoutY="56.0" prefHeight="25.0" prefWidth="85.0" text="Nazwa Gry" />
+      <Button layoutX="526.0" layoutY="124.0" mnemonicParsing="false" onAction="#inicjalizacja" prefHeight="25.0" prefWidth="126.0" text="Wyszukaj wszystkich" />
+      <Button layoutX="431.0" layoutY="124.0" mnemonicParsing="false" onAction="#usunGre" prefHeight="25.0" prefWidth="85.0" text="Usun" />
+      <Button layoutX="334.0" layoutY="124.0" mnemonicParsing="false" onAction="#updateGre" prefHeight="25.0" prefWidth="85.0" text="Update" />
+      <Button layoutX="236.0" layoutY="124.0" mnemonicParsing="false" onAction="#PrzeszukajGry" prefHeight="25.0" prefWidth="85.0" text="Wyszukaj" />
+      <TextField fx:id="searchRokP" layoutX="568.0" layoutY="88.0" prefHeight="25.0" prefWidth="70.0" promptText="Rok" />
+      <TextField fx:id="searchIDGry" layoutX="235.0" layoutY="88.0" prefHeight="25.0" prefWidth="70.0" promptText="ID" />
+      <Label layoutX="568.0" layoutY="58.0" prefHeight="25.0" prefWidth="85.0" text="Rok produkcji" />
+      <Label layoutX="235.0" layoutY="58.0" prefHeight="25.0" prefWidth="63.0" text="ID Gry" underline="true" />
+      <TextField fx:id="txtnazwa_k" layoutX="111.0" layoutY="60.0" prefHeight="25.0" prefWidth="114.0" promptText="Nazwa" />
+      <TextField fx:id="txtrok_p" layoutX="111.0" layoutY="120.0" prefHeight="25.0" prefWidth="114.0" promptText="Rok" />
+      <TextField fx:id="txtprod" layoutX="111.0" layoutY="90.0" prefHeight="25.0" prefWidth="114.0" promptText="Producent" />
+      <Label layoutX="26.0" layoutY="120.0" prefHeight="25.0" prefWidth="77.0" text="Rok Produkcji" />
+      <Label layoutX="26.0" layoutY="90.0" prefHeight="25.0" prefWidth="77.0" text="Producent" />
+      <Label layoutX="26.0" layoutY="60.0" prefHeight="25.0" prefWidth="85.0" text="Nazwa Gry" />
+      <Label layoutX="18.0" layoutY="227.0" prefHeight="25.0" prefWidth="77.0" text="Resultat" />
+      <TableView fx:id="GraTable" layoutX="235.0" layoutY="159.0" prefHeight="242.0" prefWidth="501.0">
+         <columns>
+            <TableColumn fx:id="colGraId" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="colKonNazwa" prefWidth="95.0" text="Nazwa Gry" />
+            <TableColumn fx:id="colGraRok" prefWidth="90.0" text="Rok Produkcji" />
+            <TableColumn fx:id="colGraProd" prefWidth="82.0" text="Producent" />
+            <TableColumn fx:id="colGNazwa" prefWidth="88.0" text="Konsola" />
+            <TableColumn fx:id="colKonID" prefWidth="83.0" text="ID Konsoli" />
+         </columns>
+      </TableView>
+      <TextArea fx:id="resultConsole" layoutX="14.0" layoutY="253.0" prefHeight="143.0" prefWidth="208.0" />
+      <Separator layoutX="228.0" layoutY="58.0" orientation="VERTICAL" prefHeight="352.0" prefWidth="7.0" />
+      <Button layoutX="117.0" layoutY="181.0" mnemonicParsing="false" onAction="#wstawgre" prefHeight="25.0" prefWidth="102.0" text="Dodaj gre" />
+      <Button layoutX="18.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnConnect" prefHeight="44.0" prefWidth="215.0" text="Zamień na Konsole" textAlignment="CENTER" textFill="#3415d6">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <Label layoutX="26.0" layoutY="151.0" prefHeight="25.0" prefWidth="77.0" text="Konsola" />
+      <Label layoutX="453.0" layoutY="58.0" prefHeight="25.0" prefWidth="85.0" text="Konsola" />
+      <Label layoutX="654.0" layoutY="58.0" prefHeight="25.0" prefWidth="85.0" text="Producent" />
+      <TextField fx:id="searchProd" layoutX="650.0" layoutY="88.0" prefHeight="25.0" prefWidth="85.0" promptText="Producent" />
+      <ChoiceBox fx:id="choicebox" layoutX="111.0" layoutY="151.0" prefHeight="25.0" prefWidth="114.0" />
+      <ChoiceBox fx:id="choiceboxes" layoutX="445.0" layoutY="88.0" prefHeight="25.0" prefWidth="114.0" />
+      <Label alignment="CENTER" layoutX="244.0" layoutY="10.0" prefHeight="46.0" prefWidth="501.0" text="Gry" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Button layoutX="26.0" layoutY="181.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="77.0" text="clear" />
+      <Button layoutX="665.0" layoutY="124.0" mnemonicParsing="false" onAction="#clearsear" prefHeight="25.0" prefWidth="54.0" text="clear" />
+   </children>
+</AnchorPane>
